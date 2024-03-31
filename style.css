@@ -1,0 +1,155 @@
+body, html {
+  background-color: #EBECF0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body, p, input, select, textarea, button {
+  font-family: inherit;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  color: #000000;
+}
+
+input {
+  font-size: 16px; /* Consistent font size with textarea */
+  padding: 12px; /* Comfortable padding */
+  width: calc(100% - 24px); /* Adjust width to account for padding */
+  background-color: #FFFFFF; /* Solid white background */
+  border: 1px solid #B0BEC5; /* Subtle border */
+  border-radius: 8px; /* Rounded corners for modern look */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12); /* Soft inner shadow */
+  transition: all 0.3s ease; /* Smooth transition for interactions */
+}
+
+input:focus {
+  border-color: #78909C; /* Highlight focus with a different border color */
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.24); /* Deeper shadow on focus */
+}
+
+/* Specific styles for the language input to add an icon */
+input.language-input {
+  background-image: url('path/to/language-icon.svg'); /* Add your icon path */
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Icon position inside the input */
+  background-size: 24px; /* Size of the icon */
+  padding-right: 40px; /* Adjust padding to make space for the icon */
+}
+
+select, textarea, button {
+  margin-bottom: 8px;
+  box-shadow: inset 2px 2px 5px #87888f, inset -5px -5px 10px #FFF;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  border: 0;
+  outline: 0;
+  border-radius: 320px;
+  padding: 12px;
+  background-color: #EBECF0;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+input:focus, textarea:focus {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+form {
+  padding: 20px; /* Adjust padding as needed */
+  border: 2px solid #000000; /* This will create a black border */
+  width: auto; /* Adjust width based on your design requirements */
+  max-width: 600px; /* Or whatever max width you prefer */
+  margin: 20px auto; /* This centers the form in the middle of the page */
+  background-color: #ffffff; /* Assuming you want a white background */
+  box-sizing: border-box; /* This ensures that padding and border are included in the width */
+}
+
+.segment {
+  display: flex;
+  justify-content: center; /* Centers the buttons */
+  padding: 30px 0;
+}
+
+button {
+  background-color: #607D8B; /* A calm, neutral blue-grey */
+  color: #FFFFFF; /* White text color */
+  font-weight: 600; /* Slightly bolder */
+  border: none; /* Remove borders */
+  border-radius: 25px; /* Rounded corners for a modern look */
+  padding: 12px 24px; /* More padding for a larger button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+button.green {
+  background-color: #4CAF50;
+}
+
+button.red {
+  background-color: #f44336;
+}
+
+button:hover {
+  background-color: #546E7A; /* A darker shade for hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+  background-color: #455A64; /* Even darker for the active state */
+  transform: translateY(1px); /* Button presses down */
+}
+
+.title {
+  font-size: 50px;
+  color: #61677C;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.label, .color {
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: calc(100% - 24px); /* Subtracting the total horizontal padding from the width */
+  padding: 12px; /* This is the padding inside the input/textarea boxes */
+  margin-bottom: 10px; /* This adds some space below each input/textarea */
+  border: 1px solid #ccc; /* Adjust border color as needed */
+  border-radius: 4px; /* Adjust border-radius as needed for rounded corners */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.input1, textarea {
+  font-size: 16px; /* Ensure text is easily readable */
+  padding: 20px; /* More vertical padding */
+  height: 150px; /* Set a minimum height */
+  background-color: #FFFFFF; /* Solid white background */
+  border: 1px solid #B0BEC5; /* Add a subtle border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12); /* Soft inner shadow for depth */
+  transition: border-color 0.3s ease; /* Smooth transition for focus border color change */
+}
+
+.input1:focus, textarea:focus {
+  border-color: #78909C; /* Highlight focus with a different border color */
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.24); /* More pronounced shadow on focus */
+}
+
+/* Additional responsiveness */
+@media (max-width: 768px) {
+  form {
+    width: 90%; /* Makes the form responsive */
+  }
+  
+  .segment {
+    flex-direction: column; /* Stacks the buttons on smaller screens */
+  }
+  
+  button {
+    width: 100%; /* Full width for buttons on smaller screens */
+    margin: 10px 0; /* Adjusted margin for stacked layout */
+  }
+}
