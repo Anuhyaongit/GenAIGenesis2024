@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel='stylesheet' href='https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./script.js">
+  <script src="./script.js" defer></script>
+
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+
+<form class="form" id="translateForm">
+  <h1 class="title">Translator / Emotions Detector</h1>
+  <label class="color">
+    <h5>Enter a language to translate to</h5>
+    <input type="text" id="languageInput" placeholder="Enter a language..."/>
+  </label>
+  <label class="color">
+    <h5>Enter a paragraph to translate</h5>
+    <input class="input1" type="text" name="paragraph" placeholder="Enter a paragraph..."/>
+  </label>
+  <div class="segment">
+    <button class="green" type="submit">Translate!</button>
+    <button class="red" type="button" id="clearButton">Clear</button>
+  </div>
+  <label class="color">
+    <h5>The translated sentence</h5>
+    <textarea id="output_sentence" class="input1"  placeholder="Translation will appear here..." readonly></textarea>
+  </label>
+  <label class="color">
+    <h5>Emotions and Tone</h5>
+    <textarea id="output_emo" class="input1"  placeholder="Emotions and Tone" readonly></textarea>
+  </label>
+</form>
+<div id="response"></div>
+</body>
+</html>
